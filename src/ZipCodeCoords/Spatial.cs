@@ -33,8 +33,8 @@ namespace ZipCodeCoords
                 do
                 {
                     var zipCode = reader.ReadInt32();
-                    var latitude = reader.ReadDouble();
                     var longitude = reader.ReadDouble();
+                    var latitude = reader.ReadDouble();
                     coordinates.Add(new Coordinate(new ZipCode(zipCode), latitude, longitude));
                 } while (reader.BaseStream.Position < reader.BaseStream.Length);
             }

@@ -10,11 +10,11 @@ namespace Tests
         [Test]
         public void should_lookup_zip_code_by_coords()
         {
-            var coordinate = Spatial.Search(-108.491240, 39.079600);
+            var coordinate = Spatial.Search(39.079600, -108.491240);
 
             coordinate.Zip.ToString().ShouldEqual("81504");
-            coordinate.Latitude.ShouldEqual(-108.491247);
-            coordinate.Longitude.ShouldEqual(39.079602);
+            coordinate.Longitude.ShouldEqual(-108.491247);
+            coordinate.Latitude.ShouldEqual(39.079602);
         }
 
         [Test]
@@ -23,8 +23,8 @@ namespace Tests
             var coordinate = Spatial.Search("81504");
 
             coordinate.Zip.ToString().ShouldEqual("81504");
-            coordinate.Latitude.ShouldEqual(-108.491247);
-            coordinate.Longitude.ShouldEqual(39.079602);
+            coordinate.Longitude.ShouldEqual(-108.491247);
+            coordinate.Latitude.ShouldEqual(39.079602);
         }
 
         [Test]
